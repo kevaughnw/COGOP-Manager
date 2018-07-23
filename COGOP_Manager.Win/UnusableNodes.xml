@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Member_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autoabbed869-21a7-4455-85c9-40ae4cedd861" Caption="Autoabbed869-21a7-4455-85c9-40ae4cedd861(2)" RelativeSize="43.918918918918919">
+            <LayoutGroup Id="SimpleEditors" RelativeSize="68.013468013468014">
+              <LayoutGroup Id="Member">
+                <LayoutGroup Id="Member_col1" RelativeSize="49.870129870129873" />
+                <LayoutGroup Id="Member_col2" RelativeSize="50.129870129870127" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Image" RelativeSize="31.986531986531986" />
+          </LayoutGroup>
+          <LayoutGroup Id="ChangeHistory_Group" TextAlignMode="AlignWithChildren" RelativeSize="28.603603603603602" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PositionInfo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="XPObject">
+              <LayoutItem Id="Oid" ViewItem="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

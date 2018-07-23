@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="COGOP Manager">
+  <BOModel>
+    <Class Name="COGOP_Manager.Module.BusinessObjects.Member" ImageName="BO_Customer" />
+    <Class Name="COGOP_Manager.Module.BusinessObjects.PersonalInfo" DefaultDetailViewImage="BO_MyDetails" DefaultListViewImage="BO_MyDetails" ImageName="BO_MyDetails" />
+    <Class Name="COGOP_Manager.Module.BusinessObjects.Title" ImageName="BO_Position_v92" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="17.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="17.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="District_DetailView" ImageName="BO_Address">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="50">
+            <LayoutGroup Id="District" RelativeSize="10.133333333333333">
+              <LayoutItem Id="DistrictName" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="89.86666666666666">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50">
+            <LayoutGroup Id="Personal" RelativeSize="100">
+              <LayoutItem Id="Personal" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="District_ListView" ImageName="BO_Address" />
+    <ListView Id="District_LookupListView" ImageName="BO_Address" />
+    <ListView Id="District_Personal_ListView">
+      <Columns>
+        <ColumnInfo Id="_Address" Index="-1" />
+        <ColumnInfo Id="_ContactNumber" Index="-1" />
+        <ColumnInfo Id="_ContactPerson" Index="-1" />
+        <ColumnInfo Id="_District" Index="-1" />
+        <ColumnInfo Id="_Email" Index="-1" />
+        <ColumnInfo Id="_NextKinNo" Index="-1" />
+        <ColumnInfo Id="_NextOfKin" Index="-1" />
+        <ColumnInfo Id="_Notes" Index="-1" />
+        <ColumnInfo Id="_Occupation" Index="-1" />
+        <ColumnInfo Id="_Parish" Index="-1" />
+        <ColumnInfo Id="_Phone2" Index="-1" />
+        <ColumnInfo Id="_Phone3" Index="-1" />
+        <ColumnInfo Id="_WorkEmail" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Member_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.734939759036145">
+            <LayoutGroup Id="Member" RelativeSize="99.487179487179489">
+              <LayoutGroup Id="Member_col1" RelativeSize="36.180904522613062">
+                <LayoutItem Id="MemberID" RelativeSize="20" />
+                <LayoutItem Id="Title" RelativeSize="15" />
+                <LayoutItem Id="LastName" RelativeSize="15" />
+                <LayoutItem Id="FirstName" RelativeSize="15" />
+                <LayoutItem Id="MiddleName" RelativeSize="15" />
+                <LayoutItem Id="FullName" RelativeSize="20" />
+              </LayoutGroup>
+              <LayoutGroup Id="Member_col2" RelativeSize="63.819095477386938" Direction="Horizontal" Caption="Member_col2">
+                <LayoutGroup Id="Auto0010ad0e-9652-4683-a0b9-c5d9cf4c14d0" ShowCaption="False" Caption="" Index="0" RelativeSize="53.54330708661417" IsNewNode="True">
+                  <LayoutItem Id="MartialStatus" ViewItem="MartialStatus" Index="0" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="Gender" ViewItem="Gender" Index="1" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="DateBaptized" ViewItem="DateBaptized" Index="2" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="Phone" ViewItem="Phone" Index="3" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="MemberSince" ViewItem="MemberSince" Index="4" RelativeSize="35" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Image" ViewItem="Image" Index="1" RelativeSize="46.45669291338583" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="DateBaptized" RelativeSize="15" Removed="True" />
+                <LayoutItem Id="Gender" RelativeSize="15" Removed="True" />
+                <LayoutItem Id="MemberSince" RelativeSize="35" Removed="True" />
+                <LayoutItem Id="Phone" RelativeSize="15" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="0.51282051282051277" Caption="Oid" Direction="Horizontal">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="41.265060240963855" Index="1">
+            <LayoutGroup Id="Personal" RelativeSize="100">
+              <LayoutItem Id="Personal" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Position" RelativeSize="100">
+              <LayoutItem Id="Position" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Member_Personal_ListView">
+      <Columns>
+        <ColumnInfo Id="_Address" Index="-1" />
+        <ColumnInfo Id="_ContactNumber" Index="-1" />
+        <ColumnInfo Id="_ContactPerson" Index="-1" />
+        <ColumnInfo Id="_District" Index="-1" />
+        <ColumnInfo Id="_Email" Index="-1" />
+        <ColumnInfo Id="_NextKinNo" Index="-1" />
+        <ColumnInfo Id="_NextOfKin" Index="-1" />
+        <ColumnInfo Id="_Notes" Index="-1" />
+        <ColumnInfo Id="_Occupation" Index="-1" />
+        <ColumnInfo Id="_Parish" Index="-1" />
+        <ColumnInfo Id="_Phone2" Index="-1" />
+        <ColumnInfo Id="_Phone3" Index="-1" />
+        <ColumnInfo Id="_WorkEmail" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Member_Position_ListView">
+      <Columns>
+        <ColumnInfo Id="_EndDate" Index="-1" />
+        <ColumnInfo Id="_Name" SortIndex="-1" SortOrder="None" Index="-1" />
+        <ColumnInfo Id="_StartDate" Index="-1" />
+        <ColumnInfo Id="Name" SortIndex="-1" SortOrder="None" Width="225" />
+        <ColumnInfo Id="PositionLevel" Width="121" />
+        <ColumnInfo Id="StartDate" Width="89" />
+        <ColumnInfo Id="EndDate" Width="103" SortIndex="0" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Parish_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="50">
+            <LayoutGroup Id="Parish" RelativeSize="10.133333333333333">
+              <LayoutItem Id="DistrictName" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="89.86666666666666">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50">
+            <LayoutGroup Id="Personal" RelativeSize="100">
+              <LayoutItem Id="Personal" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Parish_Personal_ListView">
+      <Columns>
+        <ColumnInfo Id="_Address" Index="-1" />
+        <ColumnInfo Id="_ContactNumber" Index="-1" />
+        <ColumnInfo Id="_ContactPerson" Index="-1" />
+        <ColumnInfo Id="_District" Index="-1" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="_Email" Index="-1" />
+        <ColumnInfo Id="_NextKinNo" Index="-1" />
+        <ColumnInfo Id="_NextOfKin" Index="-1" />
+        <ColumnInfo Id="_Notes" Index="-1" />
+        <ColumnInfo Id="_Occupation" Index="-1" />
+        <ColumnInfo Id="_Parish" Index="-1" />
+        <ColumnInfo Id="_Phone2" Index="-1" />
+        <ColumnInfo Id="_Phone3" Index="-1" />
+        <ColumnInfo Id="_WorkEmail" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PersonalInfo_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="74.691358024691354">
+            <LayoutGroup Id="PersonalInfo" RelativeSize="99.724517906336089">
+              <LayoutGroup Id="PersonalInfo_col1" RelativeSize="50">
+                <LayoutItem Id="District" RelativeSize="9.75609756097561" Index="0" />
+                <LayoutItem Id="Parish" RelativeSize="7.3170731707317076" Index="1" />
+                <LayoutItem Id="Phone2" RelativeSize="7.3170731707317076" Index="2" />
+                <LayoutItem Id="Phone3" RelativeSize="7.3170731707317076" Index="3" />
+                <LayoutItem Id="NextOfKin" RelativeSize="7.3170731707317076" Index="4" />
+                <LayoutItem Id="NextKinNo" RelativeSize="7.3170731707317076" Index="5" />
+                <LayoutItem Id="Email" RelativeSize="7.3170731707317076" Index="6" />
+                <LayoutItem Id="WorkEmail" RelativeSize="7.3170731707317076" Index="7" />
+                <LayoutItem Id="EducationLevel" RelativeSize="7.3170731707317076" Index="8" />
+                <LayoutItem Id="ContactPerson" RelativeSize="7.3170731707317076" Index="9" />
+                <LayoutItem Id="ContactNumber" RelativeSize="7.3170731707317076" Index="10" />
+                <LayoutItem Id="BirthDate" RelativeSize="7.3170731707317076" Index="11" />
+                <LayoutItem Id="Occupation" RelativeSize="9.75609756097561" Index="12" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto069b668d-1a27-4a07-808e-3d1b476c89bf" ShowCaption="False" Caption="Auto069b668d-1a27-4a07-808e-3d1b476c89bf(18)" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="Address" ViewItem="Address" Index="0" RelativeSize="50.914634146341463" IsNewNode="True" />
+                <LayoutGroup Id="PersonalInfo_col2" ShowCaption="False" Direction="Horizontal" Index="1" RelativeSize="0.3048780487804878" IsNewNode="True" />
+                <LayoutItem Id="Notes" ViewItem="Notes" Index="2" RelativeSize="48.780487804878049" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="PersonalInfo_col2" RelativeSize="50" Caption="PersonalInfo_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="_District" RelativeSize="9.0909090909090917" Index="0" Removed="True" />
+                <LayoutItem Id="_Parish" RelativeSize="9.0909090909090917" Index="0" Removed="True" />
+                <LayoutItem Id="_Phone2" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="_Phone3" RelativeSize="90.9090909090909" Index="1" Removed="True" />
+                <LayoutItem Id="_NextOfKin" RelativeSize="84.0909090909091" Index="2" Removed="True" />
+                <LayoutItem Id="_NextKinNo" RelativeSize="77.272727272727266" Index="3" Removed="True" />
+                <LayoutItem Id="_Email" RelativeSize="70.454545454545453" Index="4" Removed="True" />
+                <LayoutItem Id="_WorkEmail" RelativeSize="63.636363636363633" Index="5" Removed="True" />
+                <LayoutItem Id="_Notes" RelativeSize="56.81818181818182" Index="6" Removed="True" />
+                <LayoutItem Id="_ContactPerson" RelativeSize="50" Index="7" Removed="True" />
+                <LayoutItem Id="_ContactNumber" RelativeSize="43.18181818181818" Index="8" Removed="True" />
+                <LayoutItem Id="_Occupation" RelativeSize="36.363636363636367" Index="9" Removed="True" />
+                <LayoutItem Id="_Address" RelativeSize="9.0909090909090917" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="0.27548209366391185">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="0.205761316872428" Caption="Notes" Direction="Vertical">
+            <LayoutItem Id="Address" RelativeSize="100" />
+            <LayoutItem Id="Notes" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="25.102880658436213">
+            <LayoutGroup Id="Members" RelativeSize="100" Index="0">
+              <LayoutItem Id="Members" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100" Index="1">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PositionInfo_DetailView" ImageName="BO_Position_v92">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="50">
+            <LayoutGroup Id="PositionInfo" RelativeSize="87.951807228915669">
+              <LayoutGroup Id="PositionInfo_col1" RelativeSize="97.152428810720266">
+                <LayoutItem Id="PositionLevel" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="Name" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="StartDate" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="EndDate" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+              <LayoutGroup Id="PositionInfo_col2" RelativeSize="2.8475711892797322" Caption="PositionInfo_col2" Direction="Horizontal">
+                <LayoutItem Id="_EndDate" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="_StartDate" RelativeSize="28.571428571428573" Index="0" Removed="True" />
+                <LayoutItem Id="_Name" RelativeSize="28.571428571428573" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="12.048192771084338">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50">
+            <LayoutGroup Id="Members" RelativeSize="100" Index="0">
+              <LayoutItem Id="Members" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100" Index="1">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PositionInfo_ListView" ImageName="BO_Position_v92" />
+    <ListView Id="PositionInfo_LookupListView" ImageName="BO_Position_v92" />
+    <ListView Id="PositionInfo_Members_ListView" ImageName="BO_MyDetails" />
+    <DetailView Id="Title_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="50">
+            <LayoutGroup Id="Title" RelativeSize="10.133333333333333">
+              <LayoutItem Id="TitleName" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" Direction="Horizontal" RelativeSize="89.86666666666666">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="50">
+            <LayoutGroup Id="Members" RelativeSize="100">
+              <LayoutItem Id="Members" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" RelativeSize="100">
+              <LayoutItem Id="ChangeHistory" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo" Company="Orb Inc." Copyright="Copyright © - 2017">
+  <Options Skin="Visual Studio 2013 Blue" UIType="TabbedMDI" FormStyle="Ribbon">
+    <RibbonOptions RibbonControlStyle="Office2013" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="17.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="17.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="17.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="17.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Member_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.734939759036145">
+            <LayoutGroup Id="Member">
+              <LayoutGroup Id="Member_col1" RelativeSize="36.124031007751938" />
+              <LayoutGroup Id="Member_col2" RelativeSize="63.875968992248062">
+                <LayoutGroup Id="Auto0010ad0e-9652-4683-a0b9-c5d9cf4c14d0" Caption="Auto0010ad0e-9652-4683-a0b9-c5d9cf4c14d0(12)" RelativeSize="39.805825242718448">
+                  <LayoutItem Id="MemberSince" RelativeSize="15" />
+                  <LayoutItem Id="Status" ViewItem="Status" Index="5" RelativeSize="20" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="Image" RelativeSize="60.194174757281552" />
+                <LayoutItem Id="Status" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Index="1" RelativeSize="41.265060240963855">
+            <LayoutGroup Id="Personal" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="Personal" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Position" ImageName="BO_Position_v92" TextAlignMode="AlignWithChildren">
+              <LayoutItem Id="Position" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory_Group" ShowCaption="True" Caption="Change History" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="100" IsNewNode="True">
+              <LayoutItem Id="ChangeHistory" TextAlignMode="AutoSize" ViewItem="ChangeHistory" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChangeHistory" Removed="True" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="PersonalInfo_DetailView">
+      <Items>
+        <PropertyEditor Id="_Address" Removed="True" />
+        <PropertyEditor Id="_ContactNumber" Removed="True" />
+        <PropertyEditor Id="_ContactPerson" Removed="True" />
+        <PropertyEditor Id="_District" Removed="True" />
+        <PropertyEditor Id="_Email" Removed="True" />
+        <PropertyEditor Id="_NextKinNo" Removed="True" />
+        <PropertyEditor Id="_NextOfKin" Removed="True" />
+        <PropertyEditor Id="_Notes" Removed="True" />
+        <PropertyEditor Id="_Occupation" Removed="True" />
+        <PropertyEditor Id="_Parish" Removed="True" />
+        <PropertyEditor Id="_Phone2" Removed="True" />
+        <PropertyEditor Id="_Phone3" Removed="True" />
+        <PropertyEditor Id="_WorkEmail" Removed="True" />
+      </Items>
+    </DetailView>
+    <ListView Id="PositionInfo_ChangeHistory_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Width="253" />
+        <ColumnInfo Id="ModifiedOn" Width="91" />
+        <ColumnInfo Id="OperationType" Width="133" />
+        <ColumnInfo Id="PropertyName" Width="123" />
+      </Columns>
+    </ListView>
+    <DetailView Id="PositionInfo_DetailView" ImageName="BO_Position_v92">
+      <Items>
+        <PropertyEditor Id="_EndDate" Removed="True" />
+        <PropertyEditor Id="_Name" Removed="True" />
+        <PropertyEditor Id="_StartDate" Removed="True" />
+      </Items>
+    </DetailView>
+    <ListView Id="PositionInfo_ListView" ImageName="BO_Position_v92" />
+    <ListView Id="PositionInfo_LookupListView" ImageName="BO_Position_v92" />
+    <ListView Id="PositionInfo_Members_ListView" ImageName="BO_Position_v92" />
+  </Views>
+</Application>
